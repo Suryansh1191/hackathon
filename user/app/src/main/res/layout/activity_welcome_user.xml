@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WelcomeUser"
+    android:background="@android:color/black">
+
+
+
+    <LinearLayout
+
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        >
+
+
+
+        <Button
+            android:id="@+id/welcome_signin_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign in"
+            android:background="#0091EA"
+            android:textColor="#fff"
+            android:elevation="15sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"/>
+
+        <Button
+            android:id="@+id/welcome_signup_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create Account"
+            android:background="#00C853"
+            android:textColor="#fff"
+            android:elevation="15sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

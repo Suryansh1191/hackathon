@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view_1"
+    android:elevation="10dp"
+    android:background="@android:color/black"
+    app:cardCornerRadius="25dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/hospital_24"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Hospital Name"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="160dp"
+            android:maxLines="1"
+            android:id="@+id/cv1_text1"/>
+        <Button
+            android:id="@+id/cv1_btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="More Info"
+            android:textSize="20sp"
+            android:background="@android:color/transparent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10sp"
+            android:layout_marginLeft="20dp"/>
+        <Button
+            android:id="@+id/cv1_btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="View Doctors"
+            android:textSize="20sp"
+            android:background="@android:color/transparent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10sp"
+            android:layout_marginEnd="30dp"/>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

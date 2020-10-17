@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "300091980003",
+    "firebase_url": "https://medicall-e4af2.firebaseio.com",
+    "project_id": "medicall-e4af2",
+    "storage_bucket": "medicall-e4af2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:300091980003:android:34a6eebdc9acf2f5796dd6",
+        "android_client_info": {
+          "package_name": "com.example.medicall"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "300091980003-lj7gc2rj09b867i3jfra1528041buoio.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBezCxKU-r1-QbnKRMu74nACpYzZKcl3M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "300091980003-lj7gc2rj09b867i3jfra1528041buoio.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

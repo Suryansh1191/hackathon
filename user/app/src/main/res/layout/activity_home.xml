@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+    android:fitsSystemWindows="true"
+    tools:context=".Home">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#3F51B5"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            />
+    </androidx.appcompat.widget.Toolbar>
+</RelativeLayout>
+
+
+   <GridLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:columnCount="2">
+       <Button
+           android:id="@+id/findHospitalBtn"
+           android:layout_columnWeight="0.5"
+           android:layout_height="200dp"
+           android:text="find Hospitals"
+           android:textAlignment="center"
+           android:textAllCaps="true"
+           />
+       <Button
+           android:id="@+id/bookBtn"
+           android:layout_columnWeight="0.5"
+           android:layout_height="200dp"
+           android:text="Book"
+           android:textAlignment="center"
+           android:textAllCaps="true"
+           />
+       <Button
+           android:id="@+id/viewHistoryBtn"
+           android:layout_columnWeight="0.5"
+           android:layout_height="200dp"
+           android:text="View History"
+           android:textAlignment="center"
+           android:textAllCaps="true"
+           />
+       <Button
+           android:id="@+id/sosBtn"
+           android:layout_columnWeight="0.5"
+           android:layout_height="200dp"
+           android:text="SOS"
+           android:textAlignment="center"
+           android:textAllCaps="true"
+           android:background="#FF0000"
+           />
+
+   </GridLayout>
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/main_menu"
+        />
+</androidx.drawerlayout.widget.DrawerLayout>
