@@ -1,0 +1,7 @@
+font 
+Montserrat (everything)
+HelveticaNeue-Medium(logo)
+
+colors 
+blue- #205072
+green #3FA178
