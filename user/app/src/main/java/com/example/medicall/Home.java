@@ -73,7 +73,18 @@ public class Home extends AppCompatActivity {
                 Toast.makeText(Home.this, "Coming soon", Toast.LENGTH_SHORT).show();
             }
         });
-
+        sos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Home.this,sosActivity.class));
+            }
+        });
+        book.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               startActivity(new Intent(Home.this,book_Activity.class));
+            }
+        });
     }
 
 }

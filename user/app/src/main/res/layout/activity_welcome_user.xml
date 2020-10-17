@@ -5,12 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".WelcomeUser"
-    android:background="@android:color/black">
+    >
 
 
 
     <LinearLayout
-
         android:padding="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,7 +17,17 @@
         android:orientation="vertical"
         >
 
-
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"/>
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/doctor"
+    android:layout_gravity="center"/>
 
         <Button
             android:id="@+id/welcome_signin_btn"

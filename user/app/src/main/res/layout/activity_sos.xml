@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".sosActivity">
+
+    <Button
+        android:id="@+id/ambulence"
+        style="@android:style/Widget.DeviceDefault.Light.Button.Inset"
+        android:layout_width="142dp"
+        android:layout_height="118dp"
+        android:text="AMBULANCE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.141"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.384" />
+
+    <Button
+        android:id="@+id/roadAcc"
+        style="@android:style/Widget.DeviceDefault.Light.Button.Inset"
+        android:layout_width="142dp"
+        android:layout_height="118dp"
+        android:text="Road Accident"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.141"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.652" />
+
+    <Button
+        android:id="@+id/covid"
+        style="@android:style/Widget.DeviceDefault.Light.Button.Inset"
+        android:layout_width="142dp"
+        android:layout_height="118dp"
+        android:text="COVID-19"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.851"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.654" />
+
+    <Button
+        android:id="@+id/aiims"
+        style="@android:style/Widget.DeviceDefault.Light.Button.Inset"
+        android:layout_width="142dp"
+        android:layout_height="118dp"
+        android:text="AIIMS"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.851"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.382" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="354dp"
+        android:layout_height="86dp"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:text="Emergency Helpline"
+        android:textColor="#3E3E3E"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.125" />
+</androidx.constraintlayout.widget.ConstraintLayout>

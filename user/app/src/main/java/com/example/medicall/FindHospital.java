@@ -1,35 +1,24 @@
 package com.example.medicall;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.RelativeLayout;
-import android.widget.Spinner;
-import android.widget.TextClock;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.medicall.model.HospitalDetailModel;
+import com.example.medicall.model.DoctorModel;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -47,7 +36,7 @@ public class FindHospital extends AppCompatActivity {
     RecyclerView recyclerView;
     String str ="";
     String name;
-    List<HospitalDetailModel> hospitalDetailList;
+    List<DoctorModel> hospitalDetailList;
     ArrayList<String>  cityList;
 
     @SuppressLint("ResourceType")
@@ -77,18 +66,18 @@ public class FindHospital extends AppCompatActivity {
 
                 final String city = pinCode.getText().toString();
 
-                FirebaseRecyclerOptions<HospitalDetailModel> options = null;
+                FirebaseRecyclerOptions<DoctorModel> options = null;
                 if (str.equals("")) {
-                    options = new FirebaseRecyclerOptions.Builder<HospitalDetailModel>().setQuery(rootRef.child(city), HospitalDetailModel.class).build();
+                    options = new FirebaseRecyclerOptions.Builder<DoctorModel>().setQuery(rootRef.child(city), DoctorModel.class).build();
                 } else {
-                    options = new FirebaseRecyclerOptions.Builder<HospitalDetailModel>().setQuery(rootRef.child(city).
-                            startAt(str).endAt(str = "\uf8ff"), HospitalDetailModel.class).build();
+                    options = new FirebaseRecyclerOptions.Builder<DoctorModel>().setQuery(rootRef.child(city).
+                            startAt(str).endAt(str = "\uf8ff"), DoctorModel.class).build();
                 }
 
-                FirebaseRecyclerAdapter<HospitalDetailModel,HospitalViewHolder> firebaseRecyclerAdapter=
-                        new FirebaseRecyclerAdapter<HospitalDetailModel, HospitalViewHolder>(options) {
+                FirebaseRecyclerAdapter<DoctorModel,HospitalViewHolder> firebaseRecyclerAdapter=
+                        new FirebaseRecyclerAdapter<DoctorModel, HospitalViewHolder>(options) {
                             @Override
-                            protected void onBindViewHolder(@NonNull final HospitalViewHolder hospitalViewHolder, int i, @NonNull HospitalDetailModel hospitalDetailModel) {
+                            protected void onBindViewHolder(@NonNull final HospitalViewHolder hospitalViewHolder, int i, @NonNull DoctorModel hospitalDetailModel) {
 
                                 Toast.makeText(FindHospital.this, "aya", Toast.LENGTH_SHORT).show();
 
@@ -134,7 +123,6 @@ public class FindHospital extends AppCompatActivity {
     }
 
 
-
     public static class HospitalViewHolder extends RecyclerView.ViewHolder {
         TextView hospitalName;
         Button moreInfo, viewDr;
@@ -143,9 +131,8 @@ public class FindHospital extends AppCompatActivity {
         public HospitalViewHolder(@NonNull View itemView) {
             super(itemView);
             hospitalName= itemView.findViewById(R.id.cv1_text1);
-            moreInfo = itemView.findViewById(R.id.cv1_btn1);
             cardView= itemView.findViewById(R.id.card_view_1);
-            viewDr= itemView.findViewById(R.id.cv1_btn2);
+
         }
     }
 

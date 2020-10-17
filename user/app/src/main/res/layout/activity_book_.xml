@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingBottom="20dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="20dp"
+    tools:context="com.example.medicall.book_Activity">
+
+    <View
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="35dp"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"/>
+
+    <RelativeLayout
+        android:id="@+id/layoutStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_alignParentLeft="true"
+            android:padding="5dp"
+            android:gravity="center"
+            android:textSize="40sp"
+            android:textColor="#FFF"
+            android:text="1"
+            android:background="@drawable/rectangle_aktif"
+            android:layout_width="70dp"
+            android:layout_height="70dp" />
+
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:padding="5dp"
+            android:gravity="center"
+            android:textSize="40sp"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/num2"
+            android:text="2"
+            android:background="@drawable/rectangle_non"
+            android:layout_width="70dp"
+            android:layout_height="70dp" />
+
+        <TextView
+            android:layout_alignParentRight="true"
+            android:padding="5dp"
+            android:gravity="center"
+            android:textSize="40sp"
+            android:textColor="@color/colorPrimary"
+            android:text="3"
+            android:background="@drawable/rectangle_non"
+            android:layout_width="70dp"
+            android:layout_height="70dp" />
+    </RelativeLayout>
+
+<!--======================page1========================-->
+    <LinearLayout
+        android:visibility="visible"
+        android:id="@+id/linerlayout1"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/layoutStatus"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+
+            android:layout_marginTop="16dp"
+            android:textColor="@color/colorPrimary"
+            android:text="Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/book_name"
+            android:layout_marginTop="5dp"
+            android:padding="16dp"
+            android:hint="Enter Your Name"
+            android:background="@drawable/border"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginTop="16dp"
+            android:textColor="@color/colorPrimary"
+            android:text="Phone Number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/book_number"
+            android:inputType="number"
+            android:maxLength="10"
+            android:layout_marginTop="5dp"
+            android:padding="16dp"
+            android:hint="Enter Phone Number"
+            android:background="@drawable/border"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginTop="16dp"
+            android:textColor="@color/colorPrimary"
+            android:text="Seclect Date And Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/seclectDate"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/border"
+                android:padding="16dp"
+                android:text="Seclect Date"
+                android:textColor="@color/colorPrimary" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="16dp"
+            android:textColor="@color/colorPrimary"
+            android:text="Enter Age and Sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/book_age"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/border"
+                android:hint="Enter Your Age"
+                android:padding="16dp" />
+            <EditText
+                android:id="@+id/book_sex"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/border"
+                android:hint="Your Sex"
+                android:padding="16dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <Button
+        android:background="@drawable/rectangle_aktif"
+        android:textColor="#FFF"
+        android:visibility="visible"
+        android:layout_alignParentBottom="true"
+        android:textAllCaps="false"
+        android:text="Continue"
+        android:id="@+id/contiu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+<!--========================page2==================-->
+
+        <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/linerlayout2"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/layoutStatus"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginTop="16dp"
+            android:textColor="@color/colorPrimary"
+            android:text="Date of Birth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/book_dob"
+            android:layout_marginTop="5dp"
+            android:padding="16dp"
+            android:hint="Enter DOB"
+            android:background="@drawable/border"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginTop="16dp"
+            android:textColor="@color/colorPrimary"
+            android:text="Address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+
+            android:id="@+id/book_address"
+            android:layout_marginTop="5dp"
+            android:padding="16dp"
+            android:hint="Enter Address"
+            android:background="@drawable/border"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="16dp"
+                android:textColor="@color/colorPrimary"
+                android:text="Symptoms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/book_syms"
+                android:layout_marginTop="5dp"
+                android:padding="16dp"
+                android:hint="Your Symptoms"
+                android:background="@drawable/border"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:padding="16dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/border"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/book_doctor"/>
+
+
+
+    </LinearLayout>
+    <Button
+        android:background="@drawable/rectangle_aktif"
+        android:textColor="#FFF"
+        android:visibility="gone"
+        android:layout_marginTop="195dp"
+        android:layout_alignParentBottom="true"
+        android:textAllCaps="false"
+        android:text="Submit"
+        android:id="@+id/contiu2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+
+
+</RelativeLayout>
+
+
+
+
+
+
