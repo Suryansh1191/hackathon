@@ -29,6 +29,7 @@ Medicall lets a user:
 
 ## User App
 This app constist of all the features mentioned above.
+This app generates a unice qr code that can be scanned with the Admin app to verify the booking
 
 ### About User app
 After loging in User is presented with a dashboard which conatins tabs:
