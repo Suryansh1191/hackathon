@@ -52,7 +52,7 @@ SOS is an emergency feature where user can call for:
 ------Bhupesh add brief about this here
 mei ss change kr rha
 
-![aiims](https://user-images.githubusercontent.com/63740580/96362020-f5419c00-1147-11eb-86e4-2526b0543397.png)
+![Aiims](https://user-images.githubusercontent.com/63740580/96362076-62553180-1148-11eb-8981-f5bea82c9ea5.png)
 
 
 
