@@ -21,10 +21,6 @@ Medicall lets a user:
 
 ![icon](https://user-images.githubusercontent.com/63740580/96360460-223b8200-113b-11eb-97d6-aa342e0755de.png)
 
-## Technologies that are used for making it
-- Android Studio: For developing Our Application
-- Firebase: For backend services like Authentication
-- Adobe xD: For user experience and interaction designers.
 
 ### MediCall consists of 2 parts:
 - User App 
@@ -65,7 +61,10 @@ This is the companion app for the main User App(Medicall)
 
 This is the app that would be used by the hospitals to track the number of patients, thier booking dates and scan the unique code provided by the user to verify the details of the patient.
 
-
+## Technologies that are used for making it
+- Android Studio: For developing Our Application
+- Firebase: For backend services like Authentication
+- Adobe xD: For user experience and interaction designers.
 
 # Team Code Brigade (Contributors)
 - [Suryansh Bisen](https://github.com/Suryansh1191)
