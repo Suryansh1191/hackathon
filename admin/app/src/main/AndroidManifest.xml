@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.medicalladmin">
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
         android:allowBackup="true"
@@ -9,7 +12,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MediCallAdmin">
-        <activity android:name=".MainActivity">
+        <activity android:name=".ScannerActivity"></activity>
+        <activity android:name=".barcode_Activity2" />
+        <activity android:name=".Appointment_Activity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".CurrentBooking" />
+        <activity android:name=".login_Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
