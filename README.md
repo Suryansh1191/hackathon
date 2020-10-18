@@ -7,7 +7,7 @@
 # About Medicall
 Medicall lets a user:
 1. Book a **docor's appointment online** 
-2. Search for **nearby hospitals**
+2. Get Information on about the **hospital**
 3. Review our **Previous Bookings**
 4. Lets you call emergency services via **SOS** tab in the dashboard
 
