@@ -27,7 +27,6 @@ public class WelcomeUser extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(WelcomeUser.this, Login.class));
-                finish();
             }
         });
 
@@ -35,7 +34,6 @@ public class WelcomeUser extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(WelcomeUser.this, SignUp.class));
-                finish();
             }
         });
 

@@ -86,7 +86,7 @@ public class SignUp extends AppCompatActivity {
                             profileMap.put("name", name_entered);
                             profileMap.put("email", email_entered);
                             profileMap.put("password", password_entered);
-                            rootRef.child("users").child("detail").child(userRef).
+                            rootRef.child("users").child(userRef).child("detail").
                                     updateChildren(profileMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {

@@ -54,8 +54,8 @@ public class Home extends AppCompatActivity {
                 switch (menuItem.getItemId()){
                     case R.id.nav_logout:
                         firebaseAuth.signOut();
-                        startActivity(new Intent(Home.this, Login.class));
-                        finish();
+                        startActivity(new Intent(Home.this, WelcomeUser.class));
+                        finishAffinity();
                         break;
 
                 }
