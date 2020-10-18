@@ -40,18 +40,17 @@ After loging in User is presented with a dashboard which conatins tabs:
 ![Screenshot (81)](https://user-images.githubusercontent.com/63740580/96360653-988cb400-113c-11eb-8de1-cc70cb172cce.png)
 
 
-### about SOS feature:
+### About the Hospital
+**About Hospital** section is all about the information or details regarding hospitals, doctors and also some other stuffs.
+
+![Aiims](https://user-images.githubusercontent.com/63740580/96362076-62553180-1148-11eb-8981-f5bea82c9ea5.png)
+### About SOS feature:
+
 SOS is an emergency feature where user can call for:
 - An ambulance
 - Directly call the Hospital
 - Report a road accident
 - Call for covid-19 Response
-
-### About the Hospital
-**About Hospital** section is all about the information or details regarding hospitals, doctors and also some other stuffs.
-
-![Aiims](https://user-images.githubusercontent.com/63740580/96362076-62553180-1148-11eb-8981-f5bea82c9ea5.png)
-
 
 
 ![sosscreen](https://user-images.githubusercontent.com/63740580/96360720-2072be00-113d-11eb-801f-7c29aa937563.png)
@@ -61,10 +60,23 @@ This is the companion app for the main User App(Medicall)
 
 This is the app that would be used by the hospitals to track the number of patients, thier booking dates and scan the unique code provided by the user to verify the details of the patient.
 
+## Dashboard
+- Appointment
+- Qr Scanner 
+
+![Screenshot_2020-10-18-16-02-21-52](https://user-images.githubusercontent.com/63740580/96365350-9129d280-115d-11eb-8048-7004b38e9060.jpg)
+
+### Qr scanner 
+Implementaion of barcode provides every appointment with a unique Id for identification and future refence
+![WhatsApp Image 2020-10-18 at 4 15 11 PM](https://user-images.githubusercontent.com/63740580/96365331-73f50400-115d-11eb-9430-81001b9cdab5.jpeg)
+
+
 ## Technologies that are used for making it
 - Android Studio: For developing Our Application
+- zxing core, budiyev (libraries)
 - Firebase: For backend services like Authentication
-- Adobe xD: For user experience and interaction designers.
+- Adobe xD: For user experience and Prototyping.
+ 
 
 # Team Code Brigade (Contributors)
 - [Suryansh Bisen](https://github.com/Suryansh1191)
