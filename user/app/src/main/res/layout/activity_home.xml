@@ -16,8 +16,8 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#6CECB6"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="#B2EDA8"
+        android:theme="@style/AppTheme.NoActionBar.statusBarTransparent"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
     </androidx.appcompat.widget.Toolbar>
@@ -35,42 +35,61 @@
 </RelativeLayout>
 
    <GridLayout
+       android:layout_gravity="center"
        android:layout_marginTop="10dp"
-       android:layout_width="match_parent"
+       android:layout_width="wrap_content"
        android:layout_height="wrap_content"
        android:columnCount="2">
        <Button
            android:id="@+id/findHospitalBtn"
-           android:layout_columnWeight="0.5"
+           android:layout_margin="10dp"
+           android:layout_width="150dp"
            android:layout_height="200dp"
-           android:text="find Hospitals"
+           android:text="About\nHospital"
            android:textAlignment="center"
            android:textAllCaps="true"
+           android:background="@drawable/whitw_rounded_bg"
+           android:elevation="20dp"
+           android:shadowColor="@android:color/black"
            />
        <Button
            android:id="@+id/bookBtn"
-           android:layout_columnWeight="0.5"
+           android:layout_margin="10dp"
+           android:layout_width="150dp"
            android:layout_height="200dp"
-           android:text="Book"
+           android:text="Book\nAppointment"
            android:textAlignment="center"
            android:textAllCaps="true"
+           android:background="@drawable/whitw_rounded_bg"
+           android:elevation="20dp"
+           android:shadowColor="@android:color/black"
            />
        <Button
            android:id="@+id/viewHistoryBtn"
-           android:layout_columnWeight="0.5"
+           android:layout_margin="10dp"
+           android:layout_width="150dp"
            android:layout_height="200dp"
-           android:text="View History"
+           android:text="Current\nBooking"
            android:textAlignment="center"
            android:textAllCaps="true"
+           android:background="@drawable/whitw_rounded_bg"
+           android:elevation="20dp"
+           android:shadowColor="@android:color/black"
            />
        <Button
            android:id="@+id/sosBtn"
-           android:layout_columnWeight="0.5"
+          android:layout_margin="15dp"
+           android:layout_width="150dp"
            android:layout_height="200dp"
            android:text="SOS"
+           android:textColor="@android:color/white"
+           android:textSize="30sp"
+           android:textStyle="bold"
            android:textAlignment="center"
            android:textAllCaps="true"
-           android:background="#FF0000"
+           android:background="@drawable/red_rounded_bg"
+           android:elevation="20dp"
+           android:shadowColor="@android:color/black"
            />
 
    </GridLayout>

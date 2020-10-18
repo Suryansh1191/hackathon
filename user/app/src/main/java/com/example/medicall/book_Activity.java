@@ -39,6 +39,7 @@ public class book_Activity extends AppCompatActivity implements DatePickerDialog
     private String EnterDate,EnterName,EnterSex,EnterPhn,EnterAge,Enterdob,EnterAddress,EnterSyms,EnterDoctor;
     private LinearLayout layout;
     private Button continu2;
+    String qrImgLink="linksoon";
     Spinner spinner;
     Member member;
     private DatabaseReference rootRef;
@@ -66,7 +67,7 @@ public class book_Activity extends AppCompatActivity implements DatePickerDialog
         continu2 = findViewById(R.id.contiu2);
         layout_two = findViewById(R.id.linerlayout2);
 
-        rootRef = FirebaseDatabase.getInstance().getReference().child("hospital");
+        rootRef = FirebaseDatabase.getInstance().getReference();
         mAuth = FirebaseAuth.getInstance();
     /*===================================list======================*/
 
@@ -87,7 +88,7 @@ public class book_Activity extends AppCompatActivity implements DatePickerDialog
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                if (adapterView.getItemAtPosition(i).equals("choose event")) {
+                if (adapterView.getItemAtPosition(i).equals("choose Doctor")) {
 
                 } else {
                     String item = adapterView.getItemAtPosition(i).toString();
@@ -159,23 +160,40 @@ public class book_Activity extends AppCompatActivity implements DatePickerDialog
     }
 
     private void addData() {
-        String userId= FirebaseAuth.getInstance().getUid();
-        HashMap<String, Object> profileMap = new HashMap<>();
-        profileMap.put("", userId);
+        final String userId= FirebaseAuth.getInstance().getUid();
+        final HashMap<String, Object> profileMap = new HashMap<>();
         profileMap.put("name", EnterName);
-        profileMap.put("status", EnterPhn);
-        profileMap.put("image", EnterSex);
-        rootRef.child(EnterDate).child(EnterDoctor).child(userId)
+        profileMap.put("dob",Enterdob);
+        profileMap.put("age", EnterAge);
+        profileMap.put("sex",EnterSex);
+        profileMap.put("date",EnterDate);
+        profileMap.put("symptoms",EnterSyms);
+        profileMap.put("phone", EnterPhn);
+        profileMap.put("address", EnterAddress);
+
+
+        rootRef.child("hospital").child(EnterDate).child(EnterDoctor).child(userId)          //for Hospital record
                 .updateChildren(profileMap).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()) {
+                    genrateQr(userId);
+                    profileMap.put("qrLink",qrImgLink);
+                    rootRef.child("users").child(userId).child("currentBooking").updateChildren(profileMap)  // for user record
+                            .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    Toast.makeText(book_Activity.this, "Added", Toast.LENGTH_SHORT).show();
 
-                    Toast.makeText(book_Activity.this, "Booked....", Toast.LENGTH_SHORT).show();
+                                }
+                            });
                 }
 
             }
         });
+    }
+
+    private void genrateQr(String userId) {
     }
 
     public void showDatePickerDialog(){
