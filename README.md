@@ -49,4 +49,4 @@ SOS is an emergency feature where user can call for:
 
 
 
-
+![sosscreen](https://user-images.githubusercontent.com/63740580/96360720-2072be00-113d-11eb-801f-7c29aa937563.png)
