@@ -61,6 +61,7 @@ SOS is an emergency feature where user can call for:
 
 ## Admin App
 This is the companion app for the main User App(Medicall)
+
 This is the app that would be used by the hospitals to track the number of patients, thier booking dates and scan the unique code provided by the user to verify the details of the patient.
 
 
