@@ -21,6 +21,11 @@ Medicall lets a user:
 
 ![icon](https://user-images.githubusercontent.com/63740580/96360460-223b8200-113b-11eb-97d6-aa342e0755de.png)
 
+## Technologies that are used for making it
+- Android Studio: For developing Our Application
+- Firebase: For backend services like Authentication
+- Adobe xD: For user experience and interaction designers.
+
 ### MediCall consists of 2 parts:
 - User App 
 - Admin App
