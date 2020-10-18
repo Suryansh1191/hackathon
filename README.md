@@ -62,18 +62,21 @@ This is the app that would be used by the hospitals to track the number of patie
 
 ## Dashboard
 - Appointment
-- Barcode Scanner 
-- Doctors Name
+- Qr Scanner 
 
-### Barcode scanner 
+![Screenshot_2020-10-18-16-02-21-52](https://user-images.githubusercontent.com/63740580/96365350-9129d280-115d-11eb-8048-7004b38e9060.jpg)
+
+### Qr scanner 
 Implementaion of barcode provides every appointment with a unique Id for identification and future refence
+![WhatsApp Image 2020-10-18 at 4 15 11 PM](https://user-images.githubusercontent.com/63740580/96365331-73f50400-115d-11eb-9430-81001b9cdab5.jpeg)
 
-![WhatsApp Image 2020-10-18 at 1 32 24 PM](https://user-images.githubusercontent.com/63740580/96364211-4d33cf00-1157-11eb-8c9c-eba96e700482.jpeg)
 
 ## Technologies that are used for making it
 - Android Studio: For developing Our Application
+- zxing core, budiyev (libraries)
 - Firebase: For backend services like Authentication
 - Adobe xD: For user experience and Prototyping.
+ 
 
 # Team Code Brigade (Contributors)
 - [Suryansh Bisen](https://github.com/Suryansh1191)
