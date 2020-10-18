@@ -44,7 +44,7 @@ After loging in User is presented with a dashboard which conatins tabs:
 **About Hospital** section is all about the information or details regarding hospitals, doctors and also some other stuffs.
 
 ![Aiims](https://user-images.githubusercontent.com/63740580/96362076-62553180-1148-11eb-8981-f5bea82c9ea5.png)
-### about SOS feature:
+### About SOS feature:
 
 SOS is an emergency feature where user can call for:
 - An ambulance
