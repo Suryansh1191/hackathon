@@ -70,7 +70,7 @@ public class Home extends AppCompatActivity {
         findHospital.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(Home.this, "Coming soon", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(Home.this,About.class));
             }
         });
         sos.setOnClickListener(new View.OnClickListener() {
@@ -83,6 +83,12 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                startActivity(new Intent(Home.this,book_Activity.class));
+            }
+        });
+        history.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Home.this,CurrentBooking.class));
             }
         });
     }

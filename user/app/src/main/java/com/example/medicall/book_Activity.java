@@ -1,7 +1,10 @@
 package com.example.medicall;
 
 import android.app.DatePickerDialog;
+import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -9,7 +12,9 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,6 +27,9 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.zxing.BarcodeFormat;
+import com.google.zxing.common.BitMatrix;
+import com.google.zxing.qrcode.QRCodeWriter;
 
 import java.lang.reflect.Member;
 import java.util.ArrayList;
@@ -34,7 +42,7 @@ public class book_Activity extends AppCompatActivity implements DatePickerDialog
     private Button date;
     private Button time;
     private Button continu;
-    private TextView num2;
+    private TextView num2,num1,num3;
     private EditText name,number,age,sex,dob,address,syms;
     private String EnterDate,EnterName,EnterSex,EnterPhn,EnterAge,Enterdob,EnterAddress,EnterSyms,EnterDoctor;
     private LinearLayout layout;
@@ -42,14 +50,19 @@ public class book_Activity extends AppCompatActivity implements DatePickerDialog
     String qrImgLink="linksoon";
     Spinner spinner;
     Member member;
+    private ImageView QrView;
     private DatabaseReference rootRef;
     private FirebaseAuth mAuth;
     private LinearLayout layout_two;
+    private RelativeLayout layout_3;
+    private ProgressDialog progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book_);
+
+        progressBar = new ProgressDialog(this);
 
         spinner = findViewById(R.id.book_doctor);
         name = findViewById(R.id.book_name);
@@ -59,25 +72,30 @@ public class book_Activity extends AppCompatActivity implements DatePickerDialog
         dob = findViewById(R.id.book_dob);
         address = findViewById(R.id.book_address);
         syms = findViewById(R.id.book_syms);
+        QrView = findViewById(R.id.qr_view);
 
         date = findViewById(R.id.seclectDate);
         continu = findViewById(R.id.contiu);
         layout = findViewById(R.id.linerlayout1);
-        num2 = findViewById(R.id.num2);
+        num2 = findViewById(R.id.S2);
+        num1 = findViewById(R.id.S1);
+        num3 = findViewById(R.id.S3);
         continu2 = findViewById(R.id.contiu2);
         layout_two = findViewById(R.id.linerlayout2);
+        layout_3 = findViewById(R.id.relativeLayout3);
 
         rootRef = FirebaseDatabase.getInstance().getReference();
         mAuth = FirebaseAuth.getInstance();
     /*===================================list======================*/
 
         List<String> categories = new ArrayList<>();
-        categories.add(0, "choose Doctor");
-        categories.add("Dr Mohan Lal");
-        categories.add("Dr Meenal Singh");
-        categories.add("Dr Anupam Khair");
-        categories.add("Dr Dara Singh");
-        
+        categories.add(0, "Dr Rahul Kesharwani");
+        categories.add("Dr Suryansh Bisen");
+        categories.add("Dr Hansaj Sharma");
+        categories.add("Dr Bhupesh Sinha");
+        /*----------------------list end----------------------*/
+
+
         ArrayAdapter<String> dataAdapter;
         dataAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item,categories);
 
@@ -131,6 +149,8 @@ public class book_Activity extends AppCompatActivity implements DatePickerDialog
                     Toast.makeText(book_Activity.this, "please enter all ", Toast.LENGTH_SHORT).show();
                 }
                 else {
+                    num1.setBackgroundResource(R.drawable.whitw_rounded_bg);
+                    num2.setBackgroundResource(R.drawable.rectangle_aktif);
                     layout.setVisibility(View.INVISIBLE);
                     continu.setVisibility(View.INVISIBLE);
                     layout_two.setVisibility(View.VISIBLE);
@@ -150,8 +170,16 @@ public class book_Activity extends AppCompatActivity implements DatePickerDialog
                     Toast.makeText(book_Activity.this, "please enter all details first", Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    layout_two.setVisibility(View.INVISIBLE);
-                    continu2.setVisibility(View.INVISIBLE);
+                    progressBar.setTitle("Booking Appointment");
+                    progressBar.setMessage("Get Well Soon");
+                    progressBar.setCanceledOnTouchOutside(false);
+                    progressBar.show();
+
+                    layout_two.setVisibility(View.GONE);
+                    continu2.setVisibility(View.GONE);
+                    layout_3.setVisibility(View.VISIBLE);
+                    num2.setBackgroundResource(R.drawable.whitw_rounded_bg);
+                    num3.setBackgroundResource(R.drawable.rectangle_aktif);
                     addData();
                 }
 
@@ -167,6 +195,7 @@ public class book_Activity extends AppCompatActivity implements DatePickerDialog
         profileMap.put("age", EnterAge);
         profileMap.put("sex",EnterSex);
         profileMap.put("date",EnterDate);
+        profileMap.put("doctor",EnterDoctor);
         profileMap.put("symptoms",EnterSyms);
         profileMap.put("phone", EnterPhn);
         profileMap.put("address", EnterAddress);
@@ -183,10 +212,15 @@ public class book_Activity extends AppCompatActivity implements DatePickerDialog
                             .addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
-                                    Toast.makeText(book_Activity.this, "Added", Toast.LENGTH_SHORT).show();
-
+                                    progressBar.dismiss();
+                                    Toast.makeText(book_Activity.this, "Added Successfully", Toast.LENGTH_SHORT).show();
                                 }
                             });
+                }
+                else {
+                    Toast.makeText(book_Activity.this, "failed", Toast.LENGTH_SHORT).show();
+                    QrView.setImageResource(R.drawable.whitw_rounded_bg);
+                    progressBar.dismiss();
                 }
 
             }
@@ -194,6 +228,19 @@ public class book_Activity extends AppCompatActivity implements DatePickerDialog
     }
 
     private void genrateQr(String userId) {
+        QRCodeWriter qrCodeWriter = new QRCodeWriter();
+        try {
+            BitMatrix bitMatrix = qrCodeWriter.encode(userId, BarcodeFormat.QR_CODE, 200, 200);
+            Bitmap bitmap = Bitmap.createBitmap(200, 200, Bitmap.Config.RGB_565);
+            for (int x = 0; x<200; x++){
+                for (int y=0; y<200; y++){
+                    bitmap.setPixel(x,y,bitMatrix.get(x,y)? Color.BLACK : Color.WHITE);
+                }
+            }
+            QrView.setImageBitmap(bitmap);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void showDatePickerDialog(){
