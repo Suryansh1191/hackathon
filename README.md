@@ -40,18 +40,17 @@ After loging in User is presented with a dashboard which conatins tabs:
 ![Screenshot (81)](https://user-images.githubusercontent.com/63740580/96360653-988cb400-113c-11eb-8de1-cc70cb172cce.png)
 
 
+### About the Hospital
+**About Hospital** section is all about the information or details regarding hospitals, doctors and also some other stuffs.
+
+![Aiims](https://user-images.githubusercontent.com/63740580/96362076-62553180-1148-11eb-8981-f5bea82c9ea5.png)
 ### about SOS feature:
+
 SOS is an emergency feature where user can call for:
 - An ambulance
 - Directly call the Hospital
 - Report a road accident
 - Call for covid-19 Response
-
-### About the Hospital
-**About Hospital** section is all about the information or details regarding hospitals, doctors and also some other stuffs.
-
-![Aiims](https://user-images.githubusercontent.com/63740580/96362076-62553180-1148-11eb-8981-f5bea82c9ea5.png)
-
 
 
 ![sosscreen](https://user-images.githubusercontent.com/63740580/96360720-2072be00-113d-11eb-801f-7c29aa937563.png)
