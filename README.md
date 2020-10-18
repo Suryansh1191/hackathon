@@ -5,11 +5,11 @@
 
 
 # About Medicall
-### MediCall is an Mobile based application which is use for getting Appointment for OPD in any AIIMS Raipur
+### MediCall is an Mobile based application which is use for getting Appointment for OPD in AIIMS Raipur
 
 Medicall lets a user:
 1. Book a **Doctor's appointment online for OPD** 
-2. Get Information on about the **hospital**
+2. Get Information on about the **Hospital**
 3. Review our **Previous Bookings**
 4. Lets you call emergency services via **SOS** tab in the dashboard
 
