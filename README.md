@@ -61,11 +61,20 @@ This is the companion app for the main User App(Medicall)
 
 This is the app that would be used by the hospitals to track the number of patients, thier booking dates and scan the unique code provided by the user to verify the details of the patient.
 
+## Dashboard
+- Appointment
+- Barcode Scanner 
+- Doctors Name
+
+### Barcode scanner 
+Implementaion of barcode provides every appointment with a unique Id for identification and future refence
+
+![WhatsApp Image 2020-10-18 at 1 32 24 PM](https://user-images.githubusercontent.com/63740580/96364211-4d33cf00-1157-11eb-8c9c-eba96e700482.jpeg)
 
 ## Technologies that are used for making it
 - Android Studio: For developing Our Application
 - Firebase: For backend services like Authentication
-- Adobe xD: For user experience and interaction designers.
+- Adobe xD: For user experience and Prototyping.
 
 # Team Code Brigade (Contributors)
 - [Suryansh Bisen](https://github.com/Suryansh1191)
