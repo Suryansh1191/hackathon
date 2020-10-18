@@ -1,4 +1,4 @@
-# Medicall App
+# MediCall App
 ## Technohub Hackathon 
 ### Problem statement
 `Design an app (Mobile/Web) for online OPD appointment and Hospital Information System`
@@ -6,12 +6,12 @@
 
 # About Medicall
 Medicall lets a user:
-1. Book a **docor's appointment online** 
+1. Book a **Doctor's appointment online for OPD** 
 2. Get Information on about the **hospital**
 3. Review our **Previous Bookings**
 4. Lets you call emergency services via **SOS** tab in the dashboard
 
-### Medical consists of 2 parts:
+### MediCall consists of 2 parts:
 - User App 
 - Admin App
 
@@ -23,7 +23,7 @@ Medicall lets a user:
 
 ![icon](https://user-images.githubusercontent.com/63740580/96360460-223b8200-113b-11eb-97d6-aa342e0755de.png)
 
-### Medical consists of 2 parts:
+### MediCall consists of 2 parts:
 - User App 
 - Admin App
 
