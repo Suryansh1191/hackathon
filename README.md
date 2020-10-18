@@ -29,7 +29,7 @@ Medicall lets a user:
 
 ## User App
 This app constist of all the features mentioned above.
-This app generates a unice qr code that can be scanned with the Admin app to verify the booking
+This app generates a unique bare code that can be scanned with the Admin app to verify the booking
 
 ### About User app
 After loging in User is presented with a dashboard which conatins tabs:
@@ -48,9 +48,20 @@ SOS is an emergency feature where user can call for:
 - Report a road accident
 - Call for covid-19 Response
 
+### About the Hospital
+------Bhupesh add brief about this here
+mei ss change kr rha
+
+![aiims](https://user-images.githubusercontent.com/63740580/96362020-f5419c00-1147-11eb-86e4-2526b0543397.png)
+
 
 
 ![sosscreen](https://user-images.githubusercontent.com/63740580/96360720-2072be00-113d-11eb-801f-7c29aa937563.png)
+
+## Admin App
+This is the companion app for the main User App(Medicall)
+This is the app that would be used by the hospitals to track the number of patients, thier booking dates and scan the unique code provided by the user to verify the details of the patient.
+
 
 
 # Team Code Brigade (Contributors)
