@@ -55,6 +55,6 @@ SOS is an emergency feature where user can call for:
 
 # Team Code Brigade (Contributors)
 - [Suryansh Bisen](https://github.com/Suryansh1191)
-- [Rahul Keshervani](https://github.com/RahulKesharwani353)
+- [Rahul Kesharwani](https://github.com/RahulKesharwani353)
 - [Hansaj Sharma](https://github.com/hansaj-sharma)
 - [Bhupesh Sinha](https://github.com/bhupeshsinha)
