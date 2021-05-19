@@ -59,6 +59,20 @@
         app:layout_constraintVertical_bias="0.549" />
 
     <Button
+        android:id="@+id/apponment"
+        android:layout_width="142dp"
+        android:layout_height="117dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginBottom="96dp"
+        android:text="Doctors\nList"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.144"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Apponment"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
         android:id="@+id/barcode"
         android:layout_width="142dp"
         android:layout_height="117dp"
@@ -69,6 +83,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.547" />
+
+    <Button
+        android:id="@+id/barcode2"
+        android:layout_width="142dp"
+        android:layout_height="117dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="96dp"
+        android:text="Change\nAppointment"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.802"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barcode" />
 
     <Button
         android:id="@+id/logOut"
