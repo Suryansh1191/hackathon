@@ -64,11 +64,11 @@ This is the app that would be used by the hospitals to track the number of patie
 - Appointment
 - Qr Scanner 
 
-<img src="https://user-images.githubusercontent.com/63740580/96365331-73f50400-115d-11eb-9430-81001b9cdab5.jpeg" width="100" height="200" />
+<img src="https://user-images.githubusercontent.com/63740580/96365331-73f50400-115d-11eb-9430-81001b9cdab5.jpeg" width="200" height="350" />
 
 ### Qr scanner 
 Implementaion of barcode provides every appointment with a unique Id for identification and future refence
-![WhatsApp Image 2020-10-18 at 4 15 11 PM](https://user-images.githubusercontent.com/63740580/96365331-73f50400-115d-11eb-9430-81001b9cdab5.jpeg)
+<!-- ![WhatsApp Image 2020-10-18 at 4 15 11 PM](https://user-images.githubusercontent.com/63740580/96365331-73f50400-115d-11eb-9430-81001b9cdab5.jpeg) -->
 
 
 ## Technologies that are used for making it
